@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answering Portal</title>
+</head>
+<body>
+    <h1>Question Answering Portal</h1>
+
+    <form method="post">
+        <label for="context">Input Context:</label><br>
+        <textarea id="context" name="context" rows="4" cols="50">{{ context }}</textarea><br>
+
+        <label for="question">Question:</label><br>
+        <input type="text" id="question" name="question" value="{{ question }}"><br>
+
+        <input type="submit" value="Ask Question">
+    </form>
+
+    {% if answer %}
+        <h2>Answer:</h2>
+        <p>{{ answer }}</p>
+    {% endif %}
+</body>
+</html>
